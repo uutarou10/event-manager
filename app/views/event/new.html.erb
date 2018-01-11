@@ -1,0 +1,20 @@
+<h2>新しいイベントを作成</h2>
+<%= form_for @event, url: {action: :create} do |f| %>
+  <div class="form-group">
+    <label>イベント名</label>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label>イベントの説明文</label>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label>イベント開始日</label>
+    <%= f.date_field :start_at, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label>イベント終了日</label>
+    <%= f.date_field :finish_at, class: 'form-control' %>
+  </div>
+  <%= f.submit 'イベントを作成する', class: 'btn btn-primary' %>
+<% end %>
