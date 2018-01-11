@@ -8,4 +8,8 @@ class EventController < ApplicationController
     Event.create!(event)
     redirect_to '/'
   end
+
+  def list
+    @events = Event.all.order(:id)
+  end
 end

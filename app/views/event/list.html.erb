@@ -1,0 +1,19 @@
+<h2>イベント一覧</h2>
+<% unless @events.empty? %>
+  <p>現在募集中のイベントは<%= @events.count %>件あります。
+  <% for event in @events do %>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= event.title %></h3>
+    </div>
+    <div class="panel-body">
+      <%= event.description %>
+      <hr>
+      <small>開始日: <%= event.start_at %></small><br>
+      <small>終了日: <%= event.finish_at %></small>
+    </div>
+  </div>
+  <% end %>
+<% else %>
+    <p>まだイベントはありません。<br><%= link_to('イベントを作成する', '/event/new') %></p>
+<% end %>

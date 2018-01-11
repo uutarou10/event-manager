@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class EventControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get event_new_url
+  test "should get list" do
+    get event_list_url
     assert_response :success
   end
 

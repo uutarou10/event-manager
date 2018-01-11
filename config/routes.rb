@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'event/list'
+
   get 'event/new'
   post 'event/create'
 
